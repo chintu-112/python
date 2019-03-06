@@ -12,4 +12,5 @@ data.seek(0)
 for line in data :
         print(line, end='')
 
+data.close()
 

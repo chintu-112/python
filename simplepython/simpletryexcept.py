@@ -10,3 +10,5 @@ for line in data:
 	except:
 		pass
 
+data.close()
+

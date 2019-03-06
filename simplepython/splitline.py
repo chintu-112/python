@@ -7,3 +7,4 @@ for line in data :
 	print(person)
 	print(line_spoken)
 
+data.close()
