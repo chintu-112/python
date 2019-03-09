@@ -16,11 +16,11 @@ try:
                 kid.append(line_spoken)
             else:
                 pass
-        except ValueError:
-            pass
+        except ValueError as VE:
+            print(str(VE))
     data.close()
-except IOError:
-    print('The data file is missing')
+except IOError as IOE:
+    print('The data file is missing' + str(IOE))
 
 print(dad)
 print(kid)
@@ -35,14 +35,8 @@ try:
 
     #dadfile.close()
     #kidfile.close()
-except IOError:
-    print('File Error')
+except IOError as IOE:
+    print('File Error' + str(IOE))
 finally:
     dadfile.close()
     kidfile.close()
-
-
-
-
-            
-
