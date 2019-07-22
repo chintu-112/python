@@ -1,0 +1,11 @@
+Dad : Lets start telling a Story
+Kid : Ok Dad, Let me tell the story to you
+Dad : Wonderful, which story you are going to tell
+Kid : I will tell you story about Greedy Dog
+Dad - Some line without the :
+Dad : Awesome, go ahead
+Kid : Once upon a time...
+Kid - Some line without the correct structure
+Dad : Superb saying...
+Kid : Thankyou Dad...
+Dad - Some other line with incorrect structure
