@@ -112,10 +112,13 @@ def missingLettersPuzzle(master, level):
     l = list(range(1, levelNum))
     random.shuffle(l)
 
-    rand1 = l.pop()
-    rand2 = l.pop()
-    tempWord[rand1] = " "
-    tempWord[rand2] = " "
+    #rand1 = l.pop()
+    #rand2 = l.pop()
+    #tempWord[rand1] = " "
+    #tempWord[rand2] = " "
+
+    for i in range(int((levelNum / 2) + 0.5)):
+      tempWord[l.pop()] = " "
 
     print(str(orgWord) + " : " + str(tempWord))
     while True:
@@ -136,4 +139,4 @@ finalList = segregateWords(filteredWords)
 
 #print(finalList['hard'])
 
-missingLettersPuzzle(finalList, "8")
+missingLettersPuzzle(finalList, "4")
