@@ -129,6 +129,35 @@ def missingLettersPuzzle(master, level):
       if str(tempWord) == str(orgWord):
         break
 
+def ruffleshufflePuzzle(master, level):
+  randomWords = []
+  for i in range(5):
+    rand = random.choice(master[level])
+    if rand in randomWords:
+      pass
+    else:
+      randomWords.append(rand)
+  print(randomWords)
+
+  for eachWord in randomWords:
+    orgWord = eachWord
+    l = list(eachWord)
+    random.shuffle(l)
+    shuffleWord = ''.join(l)
+    print(orgWord + " : " + shuffleWord)
+
+    while True:
+      tempWord = []
+      for index in range(int(level)):
+        charInput = input("Enter the Character : ")
+        #tempWord[index] = charInput
+        tempWord.append(charInput)
+
+        print(orgWord + " : " + str(tempWord))
+      finalTempWord = ''.join(tempWord)
+      if finalTempWord == orgWord:
+        break
+
 
 ### Main Section
 
@@ -139,4 +168,22 @@ finalList = segregateWords(filteredWords)
 
 #print(finalList['hard'])
 
-missingLettersPuzzle(finalList, "4")
+levels = (1,2,3,4,5,6,7,8,9)
+
+print("Games to Play")
+print("Missing Letter Words : 1")
+print("Shuffle Ruffle : 2")
+gameNumber = input("Enter the Game you want to Play : ")
+
+if gameNumber == "1":
+  for eachLevel in levels:
+    print("Starting with Level : " + str(eachLevel))
+    missingLettersPuzzle(finalList, str((eachLevel + 2)))
+  print("End of Game")
+elif gameNumber == "2":
+  for eachLevel in levels:
+    print("Starting with Level : " + str(eachLevel))
+    ruffleshufflePuzzle(finalList, str((eachLevel + 2)))
+  print("End of Game")
+else:
+  print("Need to add more games")
